@@ -8,8 +8,8 @@
 // require readline module
 // import prompt as ES6 module
 import prompt from 'prompt';
-import { Game } from './game.js';
-import { UI } from './constants.js';
+import { Game } from './modules/game.js';
+import { UI } from './modules/constants.js';
 
 // main game loop
 const gameLoop = async () => {
