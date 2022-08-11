@@ -8,32 +8,32 @@
  * User moves to next level
  */
 
-import { Game, Player, Avatar, Level, Booster, Obstacle } from './modules';
+import { Game, Booster, Obstacle } from './modules/index.js';
 
-// create game loop
-const gameLoop = async () => {
-  // create game
+const simulatedGame = async () => {
   const game = new Game();
 
-  // select role for player
-  game.player.setRole();
+  game.selectAvatar();
 
-  // load level 1
-  game.setLevel();
+  game.startGame();
 
   // play game
-  // move player
+  game.getPlayer().move('up');
+  game.getPlayer().move('up');
+  // move should also update the player's location in the level
+
+  // use 1st power
+  game.getPlayer().powers()[0].use();
+
   // get booster
+  game.getPlayer().powers()[0].applyBoost(new Booster('booster 1'));
+
   // face obstacle
+  game.getPlayer().damage(new Obstacle('obstacle 1'));
 
-  // level cleared
-  // load new level to game
+  game.levelCleared();
 
-  // player move
-  // player dies
-
-  // ask if player wants to play again
-  game.playAgain();
+  game.gameOver();
 };
 
-// where to you call gameLoop?
+simulatedGame();

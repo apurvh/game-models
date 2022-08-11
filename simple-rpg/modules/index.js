@@ -1,6 +1,6 @@
-export { Game } from './game';
-export { Avatar } from './avatar';
-export { Player } from './player';
-export { Level } from './level';
-export { Booster } from './booster';
-export { Obstacle } from './obstacle';
+export { Game } from './game.js';
+export { Avatar } from './avatar.js';
+export { Player } from './player.js';
+export { Level } from './level.js';
+export { Booster } from './booster.js';
+export { Obstacle } from './obstacle.js';

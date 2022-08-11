@@ -1,13 +1,14 @@
-class Power {
+export class Power {
   constructor(name, effect) {
     this.name = name;
     this.effect = effect;
-    this.use = 5;
+    this.amount = 5;
   }
   applyBoost(booster) {
-    console.log(`${this.player.name} is using ${booster.name}`);
+    console.log(`${this.name} is boosted by ${booster.name}`);
   }
   use() {
-    this.use--;
+    this.amount--;
+    console.log(`${this.name} is used, and has ${this.amount} uses remaining`);
   }
 }

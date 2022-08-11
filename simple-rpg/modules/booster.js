@@ -1,6 +1,6 @@
 export class Booster {
-  constructor(name, effect) {
+  constructor(name, location) {
     this.name = name;
-    this.effect = effect;
+    this.location = location;
   }
 }
