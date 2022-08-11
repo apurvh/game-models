@@ -1,0 +1,56 @@
+Learning Game
+
+User -> 3 roles/avatar to select -> each role/avatar have its own power & capability
+Overall three levels -> User aim to clear these levels one by one.
+Each level mein obstacles & boosters
+
+Data modelling and basic logic of interactions b/w these entities.
+
+
+Entities -> 
+
+Game {
+    entities: 
+    level: Level
+    levelChange: (level)
+    user:
+    createScene: ()
+}
+
+Player {
+    role: Avatar
+    life: 1
+    id: name..
+    move: ()
+    sustainDamage: (Obstacle)
+}
+
+Avatar {
+    power: Powers
+    addPower: (Power)     
+}
+
+Power {
+    type:
+    use: 5x
+    usePower :
+    applyBoost: (Booster)
+    changeUse: ()
+}
+
+Level {
+    level: 1..3
+}
+
+Booster {
+    location:
+    powerType:
+    quanity: 
+}
+
+Obstacles {
+    location: 
+    effect: 
+}
+
+// Create Game => 
